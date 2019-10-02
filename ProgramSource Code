@@ -1,0 +1,84 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Assignment2_SENG8040
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            string InitialSelect = "";
+
+            bool ExitMenuSelect = false;
+
+            while (ExitMenuSelect == false)
+
+            {
+
+                Console.WriteLine("1 - Enter triangle dimensions");
+                Console.WriteLine("2 - Exit\n");
+                Console.WriteLine("Please select an option from the above menu:\n");
+                InitialSelect = Console.ReadLine();
+
+                if (InitialSelect != "1" && InitialSelect != "2")
+                {
+                    Console.WriteLine("Incorrect input given please try with valid input\n ");
+                }
+                if (InitialSelect == "2")
+                {
+                    ExitMenuSelect = true;
+                    break;
+                }
+
+                int Val1;
+                int Val2;
+                int Val3;
+
+                String firstval;
+                String secondval;
+                String thirdval;
+
+                Console.WriteLine("\nEnter three integer sides of the triangle \n");
+
+                do
+                {
+                    Console.WriteLine("Please enter first integer value");
+                    firstval = Console.ReadLine();
+
+                } while (!(int.TryParse(firstval, out Val1)));
+
+                do
+                {
+                    Console.WriteLine("Please enter second integer value");
+                    secondval = Console.ReadLine();
+
+                } while (!(int.TryParse(secondval, out Val2)));
+
+                do
+                {
+                    Console.WriteLine("please enter third integer value");
+                    thirdval = Console.ReadLine();
+                } while (!(int.TryParse(thirdval, out Val3)));
+
+
+                if ((Val1 + Val2) > Val3 && (Val2 + Val3) > Val1 && (Val3 + Val1) > Val2)
+                {
+                    Console.WriteLine("\nForms a Triangle\n");
+                    Console.WriteLine("The three sides of the triangle are {0},{1},{2}\n", Val1, Val2, Val3);
+                    Console.WriteLine(TriangleSolver.Analyze(Val1, Val2, Val3));
+                }
+                else
+                {
+                    Console.WriteLine("Does Not Form a triangle\n");
+                }
+
+            }
+        }
+    }
+}
+
+
