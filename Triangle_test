@@ -1,0 +1,166 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Assignment2_SENG8040;
+using NUnit.Framework;
+
+
+namespace Triangle_Test
+{
+    [TestFixture]
+    class Class1
+    {
+        [Test]
+        public void Analyze_firstval2_secondval2_thirdval2_expectedoutput_EquilateralTriangle()
+        {
+            //Arrange
+            int firstval = 2;
+            int Secondval = 2;
+            int thirdval = 2;
+            String FormEquilateralTriangleType = TriangleSolver.Analyze(firstval, Secondval, thirdval);
+            String programActualResult = FormEquilateralTriangleType;
+
+            //Act
+            String expectedEquilateralOutput = "Equilateral Traingle";
+
+            //Assert
+            Assert.AreEqual(expectedEquilateralOutput, programActualResult);
+
+
+        }
+
+        [Test]
+        public void Analyze_firstval100_secondval100_thirdval5_expectedoutput_IsoscelesTriangle()
+        {
+            //Arrange
+            int firstval = 100;
+            int Secondval = 100;
+            int thirdval = 5;
+            String FormIsoscelesTriangleType = TriangleSolver.Analyze(firstval, Secondval, thirdval);
+            String programActualResult = FormIsoscelesTriangleType;
+
+            //Act
+            String expectedIsoscelesOutput = "Isosceles Triangle";
+
+            //Assert
+            Assert.AreEqual(expectedIsoscelesOutput, programActualResult);
+
+        }
+
+
+        [Test]
+        public void Analyze_firstval6_secondval20_thirdval30_expectedoutput_ScaleneTriangle()
+        {
+            //Arrange
+            int firstval = 6;
+            int Secondval = 20;
+            int thirdval = 30;
+            String FormScaleneTriangleType = TriangleSolver.Analyze(firstval, Secondval, thirdval);
+            String programActualResult = FormScaleneTriangleType;
+
+            //Act
+            String expectedScaleneOutput = "Scalene Triangle";
+
+            //Assert
+            Assert.AreEqual(expectedScaleneOutput, programActualResult);
+        }
+
+
+        [Test]
+        public void Analyze_firstval500_Secondval500_thirdval500_expectedoutput_EquilateralTriangle()
+        {
+            //Arrange
+            int firstval = 500;
+            int Secondval = 500;
+            int thirdval = 500;
+            String FormEquilateralTriangleType = TriangleSolver.Analyze(firstval, Secondval, thirdval);
+            String programActualResult = FormEquilateralTriangleType;
+
+            //Act
+            String expectedEquilateralOutput = "Equilateral Traingle";
+
+            //Assert
+            Assert.AreEqual(expectedEquilateralOutput, programActualResult);
+
+        }
+
+
+        [Test]
+        public void Analyze_firstval45_secondval45_thirdval30_expectedoutput_IsoscelesTriangle()
+        {
+            //Arrange
+            int firstval = 45;
+            int Secondval = 45;
+            int thirdval = 30;
+            String FormIsoscelesTriangleType = TriangleSolver.Analyze(firstval, Secondval, thirdval);
+            String programActualResult = FormIsoscelesTriangleType;
+
+            //Act
+            String expectedIsoscelesOutput = "Isosceles Triangle";
+
+            //Assert
+            Assert.AreEqual(expectedIsoscelesOutput, programActualResult);
+
+        }
+
+
+
+        [Test]
+        public void Analyze_firstval8_secondval10_thirdval5_expectedoutput_ScaleneTriangle()
+        {
+            //Arrange
+            int firstval = 8;
+            int Secondval = 10;
+            int thirdval = 5;
+            String FormScaleneTriangleType = TriangleSolver.Analyze(firstval, Secondval, thirdval);
+            String programActualResult = FormScaleneTriangleType;
+
+            //Act
+            String expectedScaleneOutput = "Scalene Triangle";
+
+            //Assert
+            Assert.AreEqual(expectedScaleneOutput, programActualResult);
+        }
+
+
+
+        [Test]
+        public void Analyze_firstval40_Secondval40_thirdval40_expectedoutput_EquilateralTriangle()
+        {
+            //Arrange
+            int firstval = 40;
+            int Secondval = 40;
+            int thirdval = 40;
+            String FormEquilateralTriangleType = TriangleSolver.Analyze(firstval, Secondval, thirdval);
+            String programActualResult = FormEquilateralTriangleType;
+
+            //Act
+            String expectedEquilateralOutput = "Equilateral Traingle";
+
+            //Assert
+            Assert.AreEqual(expectedEquilateralOutput, programActualResult);
+
+        }
+
+
+        [Test]
+        public void Analyze_firstval20_secondval20_thirdval2_expectedoutput_IsoscelesTriangle()
+        {
+            //Arrange
+            int firstval = 20;
+            int Secondval = 20;
+            int thirdval = 2;
+            String FormIsoscelesTriangleType = TriangleSolver.Analyze(firstval, Secondval, thirdval);
+            String programActualResult = FormIsoscelesTriangleType;
+
+            //Act
+            String expectedIsoscelesOutput = "Isosceles Triangle";
+
+            //Assert
+            Assert.AreEqual(expectedIsoscelesOutput, programActualResult);
+
+        }
+    }
+}
